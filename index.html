@@ -6,7 +6,7 @@
   <title>Deliciosa Fábrica de Mini Donuts 🍩✨</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --creme: #fffaf0; }
+    :root { --rosa: #ff1493; --rosa-claro: #ffe4e1; --creme: #fffaf0; }
     body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), #fff); margin: 0; padding: 20px; color: #333; }
     .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); text-align: center; }
     h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.8rem; margin: 10px 0 5px; }
@@ -15,6 +15,7 @@
     h2 { color: var(--rosa); margin: 40px 0 20px; font-size: 2.2rem; }
     .caixinha { background: var(--creme); border-radius: 16px; padding: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
     .caixinha h3 { color: var(--rosa); margin: 0 0 15px; font-size: 1.5rem; }
+    .preco { font-size: 2.2rem; font-weight: 700; color: var(--rosa); margin: 10px 0; } /* Preços maiores e rosa */
     .quantidade { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
     .quant-btn { width: 40px; height: 40px; background: var(--rosa); color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; }
     input[type="number"] { width: 80px; padding: 10px; font-size: 1.4rem; text-align: center; border: 2px solid var(--rosa-claro); border-radius: 10px; }
@@ -38,7 +39,8 @@
   <h2>Caixinhas Prontas</h2>
 
   <div class="caixinha">
-    <h3>Caixinha com 4 unidades (sem recheio) — R$ 10,00</h3>
+    <h3>Caixinha com 4 unidades (sem recheio)</h3>
+    <div class="preco">R$ 10,00</div>
     <div class="quantidade">
       <button class="quant-btn" onclick="changeQuant('c4sem', -1)">-</button>
       <input type="number" id="c4sem" min="0" value="0" readonly>
@@ -48,7 +50,8 @@
   </div>
 
   <div class="caixinha">
-    <h3>Caixinha com 4 unidades (recheado) — R$ 12,00</h3>
+    <h3>Caixinha com 4 unidades (recheado)</h3>
+    <div class="preco">R$ 12,00</div>
     <div class="quantidade">
       <button class="quant-btn" onclick="changeQuant('c4com', -1)">-</button>
       <input type="number" id="c4com" min="0" value="0" readonly>
@@ -58,7 +61,8 @@
   </div>
 
   <div class="caixinha">
-    <h3>Caixinha com 6 unidades (sem recheio) — R$ 13,00</h3>
+    <h3>Caixinha com 6 unidades (sem recheio)</h3>
+    <div class="preco">R$ 13,00</div>
     <div class="quantidade">
       <button class="quant-btn" onclick="changeQuant('c6sem', -1)">-</button>
       <input type="number" id="c6sem" min="0" value="0" readonly>
@@ -68,7 +72,8 @@
   </div>
 
   <div class="caixinha">
-    <h3>Caixinha com 6 unidades (recheado) — R$ 16,00</h3>
+    <h3>Caixinha com 6 unidades (recheado)</h3>
+    <div class="preco">R$ 16,00</div>
     <div class="quantidade">
       <button class="quant-btn" onclick="changeQuant('c6com', -1)">-</button>
       <input type="number" id="c6com" min="0" value="0" readonly>
@@ -189,13 +194,11 @@
   function enviarPedido() {
     let msg = `Oi! Pedido Deliciosa Fábrica 😍🍩\n\n`;
 
-    // Caixinhas
     caixinhas.forEach(c => {
       const qtd = parseInt(document.getElementById(c.id).value) || 0;
-      if (qtd > 0) msg += `${document.getElementById(c.totalEl).previousElementSibling.textContent} x${qtd} = R$ ${ (qtd * c.preco).toFixed(2) }\n`;
+      if (qtd > 0) msg += `Caixinha ${c.totalEl.replace('total-', '').replace('c', '').replace('sem', ' sem recheio').replace('com', ' com recheio')} x${qtd} = R$ ${(qtd * c.preco).toFixed(2)}\n`;
     });
 
-    // Personalizados
     const qSem = parseInt(sem.value) || 0;
     const qCom = parseInt(com.value) || 0;
     if (qSem + qCom > 0) {
@@ -210,7 +213,7 @@
     window.open(url, '_blank');
   }
 
-  atualizarTotais(); // Inicial
+  atualizarTotais();
 </script>
 </body>
 </html>
