@@ -4,29 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Deliciosa Fábrica de Mini Donuts 🍩✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Pacifico&display=swap" rel="stylesheet">
   <style>
     :root { --rosa: #ff1493; --rosa-claro: #ffe4e1; --creme: #fffaf0; }
-    body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), #fff); margin: 0; padding: 20px; color: #333; }
-    .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); text-align: center; }
-    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.8rem; margin: 10px 0 5px; }
-    .hero-img { width: 100%; max-height: 450px; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 30px; }
-    .subtitle { color: #666; font-size: 1.4rem; margin-bottom: 30px; }
-    h2 { color: var(--rosa); margin: 40px 0 20px; font-size: 2.2rem; }
-    .caixinha { background: var(--creme); border-radius: 16px; padding: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-    .caixinha h3 { color: var(--rosa); margin: 0 0 15px; font-size: 1.5rem; }
-    .preco { font-size: 2.2rem; font-weight: 700; color: var(--rosa); margin: 10px 0; } /* Preços maiores e rosa */
-    .quantidade { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
-    .quant-btn { width: 40px; height: 40px; background: var(--rosa); color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; }
-    input[type="number"] { width: 80px; padding: 10px; font-size: 1.4rem; text-align: center; border: 2px solid var(--rosa-claro); border-radius: 10px; }
-    .total-caixinha { font-size: 1.4rem; font-weight: bold; color: var(--rosa); margin-top: 10px; }
-    .total-geral { font-size: 2.6rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
-    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.6rem; cursor: pointer; }
-    button:hover { background: #e0459a; transform: translateY(-4px); }
-    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; }
-    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px; }
-    .checkbox-group label { background: var(--creme); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); }
-    .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
+    body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), #fff); margin: 0; padding: 20px; color: #222; }
+    .container { max-width: 750px; margin: 0 auto; background: white; border-radius: 30px; padding: 40px; box-shadow: 0 20px 50px rgba(255,20,147,0.2); text-align: center; }
+    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 4.2rem; margin: 0 0 10px; text-shadow: 2px 2px 8px rgba(255,20,147,0.3); }
+    .hero-img { width: 100%; max-height: 480px; object-fit: contain; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 40px; }
+    .subtitle { color: #444; font-size: 1.8rem; margin-bottom: 35px; font-weight: 600; }
+    h2 { color: var(--rosa); font-size: 3rem; margin: 50px 0 25px; font-weight: 900; letter-spacing: 1px; text-shadow: 1px 1px 4px rgba(255,20,147,0.2); }
+    .caixinha { background: var(--creme); border-radius: 20px; padding: 25px; margin: 25px auto; max-width: 550px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
+    .caixinha h3 { color: var(--rosa); font-size: 2rem; margin: 0 0 20px; font-weight: 700; }
+    .preco { font-size: 2.8rem; font-weight: 900; color: var(--rosa); margin: 15px 0; text-shadow: 1px 1px 5px rgba(255,20,147,0.3); }
+    .quantidade { display: flex; align-items: center; justify-content: center; gap: 20px; margin: 20px 0; }
+    .quant-btn { width: 50px; height: 50px; background: var(--rosa); color: white; border: none; border-radius: 50%; font-size: 2rem; cursor: pointer; box-shadow: 0 4px 15px rgba(255,20,147,0.3); transition: transform 0.2s; }
+    .quant-btn:hover { transform: scale(1.1); }
+    input[type="number"] { width: 100px; padding: 12px; font-size: 2rem; text-align: center; border: 3px solid var(--rosa-claro); border-radius: 12px; font-weight: bold; }
+    .total-caixinha { font-size: 1.8rem; font-weight: 700; color: var(--rosa); margin-top: 15px; }
+    .total-geral { font-size: 3.2rem; font-weight: 900; margin: 50px 0; color: var(--rosa); background: var(--creme); padding: 30px; border-radius: 20px; box-shadow: 0 8px 25px rgba(255,20,147,0.2); }
+    button { width: 100%; padding: 22px; background: var(--rosa); color: white; border: none; border-radius: 60px; font-size: 2rem; font-weight: 900; cursor: pointer; box-shadow: 0 12px 35px rgba(255,20,147,0.4); transition: all 0.3s; }
+    button:hover { background: #d6007f; transform: translateY(-5px); box-shadow: 0 18px 45px rgba(255,20,147,0.5); }
+    label { font-size: 1.8rem; font-weight: 700; color: #333; margin: 15px 0 8px; display: block; }
+    input[type="text"] { width: 80%; max-width: 400px; padding: 14px; font-size: 1.6rem; border: 3px solid var(--rosa-claro); border-radius: 12px; text-align: center; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin: 25px 0; }
+    .checkbox-group label { background: var(--creme); padding: 14px 24px; border-radius: 40px; cursor: pointer; border: 3px solid var(--rosa-claro); font-size: 1.4rem; font-weight: 600; transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); transform: scale(1.05); box-shadow: 0 6px 18px rgba(255,20,147,0.3); }
+    .info { background: var(--creme); padding: 25px; border-radius: 20px; margin-top: 40px; font-size: 1.4rem; line-height: 1.8; }
   </style>
 </head>
 <body>
@@ -135,7 +138,7 @@
 </div>
 
 <script>
-  // Caixinhas
+  // Caixinhas (mesmo código anterior)
   const caixinhas = [
     { id: 'c4sem', preco: 10, totalEl: 'total-c4sem' },
     { id: 'c4com', preco: 12, totalEl: 'total-c4com' },
@@ -151,7 +154,7 @@
     atualizarTotais();
   }
 
-  // Personalizados
+  // Personalizados (mesmo código)
   const sem = document.getElementById('sem');
   const com = document.getElementById('com');
   const totalGeralEl = document.getElementById('totalGeral');
@@ -160,7 +163,7 @@
 
   function limitar(grupo, max) {
     grupo.forEach(i => i.addEventListener('change', () => {
-      if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}!`); }
+      if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}! 🥰`); }
       atualizarTotais();
     }));
   }
@@ -193,12 +196,10 @@
 
   function enviarPedido() {
     let msg = `Oi! Pedido Deliciosa Fábrica 😍🍩\n\n`;
-
     caixinhas.forEach(c => {
       const qtd = parseInt(document.getElementById(c.id).value) || 0;
       if (qtd > 0) msg += `Caixinha ${c.totalEl.replace('total-', '').replace('c', '').replace('sem', ' sem recheio').replace('com', ' com recheio')} x${qtd} = R$ ${(qtd * c.preco).toFixed(2)}\n`;
     });
-
     const qSem = parseInt(sem.value) || 0;
     const qCom = parseInt(com.value) || 0;
     if (qSem + qCom > 0) {
@@ -206,9 +207,7 @@
       msg += `Recheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\n`;
       msg += `Cor chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\n`;
     }
-
     msg += `\nTotal geral: ${totalGeralEl.textContent}\nAguardo confirmação! ✨`;
-
     const url = `https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   }
