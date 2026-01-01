@@ -6,48 +6,81 @@
   <title>Deliciosa Fábrica de Mini Donuts 🍩✨</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --verde-menta: #98ff98; --creme: #fffaf0; }
-    body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), var(--verde-menta)); margin: 0; padding: 20px; color: #333; }
+    :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --creme: #fffaf0; }
+    body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), #fff); margin: 0; padding: 20px; color: #333; }
     .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); text-align: center; }
-    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.8rem; margin: 10px 0 5px; line-height: 1; }
+    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.8rem; margin: 10px 0 5px; }
     .hero-img { width: 100%; max-height: 450px; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 30px; }
     .subtitle { color: #666; font-size: 1.4rem; margin-bottom: 30px; }
-    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin: 40px 0 20px; font-size: 2rem; }
-    .prices { text-align: left; max-width: 500px; margin: 0 auto 30px; }
-    .prices ul { list-style: none; padding: 0; }
-    .prices li { margin: 15px 0; font-size: 1.3rem; }
-    .prices strong { color: var(--rosa); font-size: 1.5rem; }
-    label { display: block; margin: 12px 0 6px; font-weight: 600; font-size: 1.2rem; }
-    input[type="number"], input[type="text"] { width: 140px; padding: 10px; font-size: 1.3rem; border: 2px solid var(--rosa-claro); border-radius: 10px; text-align: center; margin: 0 auto; display: block; }
-    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 30px; }
-    .checkbox-group label { background: var(--creme); padding: 12px 18px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); transition: all 0.25s; font-size: 1rem; }
-    .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
-    .total { font-size: 2.6rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
-    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,105,180,0.3); }
+    h2 { color: var(--rosa); margin: 40px 0 20px; font-size: 2.2rem; }
+    .caixinha { background: var(--creme); border-radius: 16px; padding: 20px; margin: 20px auto; max-width: 500px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    .caixinha h3 { color: var(--rosa); margin: 0 0 15px; font-size: 1.5rem; }
+    .quantidade { display: flex; align-items: center; justify-content: center; gap: 15px; margin: 15px 0; }
+    .quant-btn { width: 40px; height: 40px; background: var(--rosa); color: white; border: none; border-radius: 50%; font-size: 1.5rem; cursor: pointer; }
+    input[type="number"] { width: 80px; padding: 10px; font-size: 1.4rem; text-align: center; border: 2px solid var(--rosa-claro); border-radius: 10px; }
+    .total-caixinha { font-size: 1.4rem; font-weight: bold; color: var(--rosa); margin-top: 10px; }
+    .total-geral { font-size: 2.6rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
+    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.6rem; cursor: pointer; }
     button:hover { background: #e0459a; transform: translateY(-4px); }
-    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; font-size: 1rem; line-height: 1.6; }
+    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 20px; }
+    .checkbox-group label { background: var(--creme); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); }
+    .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
   </style>
 </head>
 <body>
 <div class="container">
   <h1>🍩 Deliciosa Fábrica de Mini Donuts</h1>
-  <p class="subtitle">Fofinhos, irresistíveis e feitos com muito carinho! ✨</p>
+  <p class="subtitle">Fofinhos, irresistíveis e feitos com carinho! ✨</p>
 
-  <!-- Imagem principal única (sua foto com Homer e donuts) -->
   <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1176930047804535" alt="Deliciosa Fábrica de Mini Donuts" class="hero-img">
 
-  <!-- Novo cardápio de caixinhas -->
   <h2>Caixinhas Prontas</h2>
-  <div class="prices">
-    <ul>
-      <li><strong>Caiixinha com 4 unidades (sem recheio)</strong> — R$ 10,00</li>
-      <li><strong>Caiixinha com 4 unidades (recheado)</strong> — R$ 12,00</li>
-      <li><strong>Caiixinha com 6 unidades (sem recheio)</strong> — R$ 13,00</li>
-      <li><strong>Caiixinha com 6 unidades (recheado)</strong> — R$ 16,00</li>
-    </ul>
+
+  <div class="caixinha">
+    <h3>Caixinha com 4 unidades (sem recheio) — R$ 10,00</h3>
+    <div class="quantidade">
+      <button class="quant-btn" onclick="changeQuant('c4sem', -1)">-</button>
+      <input type="number" id="c4sem" min="0" value="0" readonly>
+      <button class="quant-btn" onclick="changeQuant('c4sem', 1)">+</button>
+    </div>
+    <div class="total-caixinha" id="total-c4sem">Subtotal: R$ 0,00</div>
   </div>
 
+  <div class="caixinha">
+    <h3>Caixinha com 4 unidades (recheado) — R$ 12,00</h3>
+    <div class="quantidade">
+      <button class="quant-btn" onclick="changeQuant('c4com', -1)">-</button>
+      <input type="number" id="c4com" min="0" value="0" readonly>
+      <button class="quant-btn" onclick="changeQuant('c4com', 1)">+</button>
+    </div>
+    <div class="total-caixinha" id="total-c4com">Subtotal: R$ 0,00</div>
+  </div>
+
+  <div class="caixinha">
+    <h3>Caixinha com 6 unidades (sem recheio) — R$ 13,00</h3>
+    <div class="quantidade">
+      <button class="quant-btn" onclick="changeQuant('c6sem', -1)">-</button>
+      <input type="number" id="c6sem" min="0" value="0" readonly>
+      <button class="quant-btn" onclick="changeQuant('c6sem', 1)">+</button>
+    </div>
+    <div class="total-caixinha" id="total-c6sem">Subtotal: R$ 0,00</div>
+  </div>
+
+  <div class="caixinha">
+    <h3>Caixinha com 6 unidades (recheado) — R$ 16,00</h3>
+    <div class="quantidade">
+      <button class="quant-btn" onclick="changeQuant('c6com', -1)">-</button>
+      <input type="number" id="c6com" min="0" value="0" readonly>
+      <button class="quant-btn" onclick="changeQuant('c6com', 1)">+</button>
+    </div>
+    <div class="total-caixinha" id="total-c6com">Subtotal: R$ 0,00</div>
+  </div>
+
+  <div class="total-geral" id="totalCaixinhas">Total das caixinhas: R$ 0,00</div>
+
   <h2>Personalize seu pedido!</h2>
+
   <label>Sem recheio (R$ 2,00 cada)</label>
   <input type="number" id="sem" min="0" value="0">
 
@@ -81,9 +114,9 @@
   </div>
 
   <h2>Cor do chocolate</h2>
-  <input type="text" id="cor" placeholder="Ex: rosa, azul, dourado">
+  <input type="text" id="cor" placeholder="Ex: rosa bebê">
 
-  <div class="total" id="total">Total aproximado: R$ 0,00</div>
+  <div class="total-geral" id="totalGeral">Total geral: R$ 0,00</div>
 
   <button onclick="enviarPedido()">📲 Enviar Pedido pelo WhatsApp</button>
 
@@ -97,37 +130,87 @@
 </div>
 
 <script>
+  // Caixinhas
+  const caixinhas = [
+    { id: 'c4sem', preco: 10, totalEl: 'total-c4sem' },
+    { id: 'c4com', preco: 12, totalEl: 'total-c4com' },
+    { id: 'c6sem', preco: 13, totalEl: 'total-c6sem' },
+    { id: 'c6com', preco: 16, totalEl: 'total-c6com' }
+  ];
+
+  function changeQuant(id, delta) {
+    const input = document.getElementById(id);
+    let val = parseInt(input.value) || 0;
+    val = Math.max(0, val + delta);
+    input.value = val;
+    atualizarTotais();
+  }
+
+  // Personalizados
   const sem = document.getElementById('sem');
   const com = document.getElementById('com');
-  const totalEl = document.getElementById('total');
+  const totalGeralEl = document.getElementById('totalGeral');
   const recheios = document.querySelectorAll('input[name="recheio"]');
   const coberturas = document.querySelectorAll('input[name="cobertura"]');
 
   function limitar(grupo, max) {
     grupo.forEach(i => i.addEventListener('change', () => {
-      if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}! 🥰`); }
-      atualizar();
+      if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}!`); }
+      atualizarTotais();
     }));
   }
   limitar(recheios, 2);
   limitar(coberturas, 3);
 
-  function atualizar() {
-    const v = (parseInt(sem.value) || 0) * 2 + (parseInt(com.value) || 0) * 3;
-    totalEl.textContent = `Total aproximado: R$ ${v.toFixed(2).replace('.', ',')}`;
-  }
-  sem.addEventListener('input', atualizar);
-  com.addEventListener('input', atualizar);
+  sem.addEventListener('input', atualizarTotais);
+  com.addEventListener('input', atualizarTotais);
 
-  function getSel(grupo) { return [...grupo].filter(i => i.checked).map(i => i.nextElementSibling.textContent).join(', ') || 'Nenhum'; }
+  function getSel(grupo) {
+    return [...grupo].filter(i => i.checked).map(i => i.nextElementSibling.textContent).join(', ') || 'Nenhum';
+  }
+
+  function atualizarTotais() {
+    let totalCaixas = 0;
+    caixinhas.forEach(c => {
+      const qtd = parseInt(document.getElementById(c.id).value) || 0;
+      const subtotal = qtd * c.preco;
+      document.getElementById(c.totalEl).textContent = `Subtotal: R$ ${subtotal.toFixed(2).replace('.', ',')}`;
+      totalCaixas += subtotal;
+    });
+    document.getElementById('totalCaixinhas').textContent = `Total das caixinhas: R$ ${totalCaixas.toFixed(2).replace('.', ',')}`;
+
+    const qSem = parseInt(sem.value) || 0;
+    const qCom = parseInt(com.value) || 0;
+    const totalPers = qSem * 2 + qCom * 3;
+    const totalFinal = totalCaixas + totalPers;
+    totalGeralEl.textContent = `Total geral: R$ ${totalFinal.toFixed(2).replace('.', ',')}`;
+  }
 
   function enviarPedido() {
-    const qSem = parseInt(sem.value) || 0, qCom = parseInt(com.value) || 0;
-    if (qSem + qCom === 0) return alert('Escolha alguns donuts fofinhos! 🍩');
-    const msg = `Oi! Pedido Deliciosa Fábrica 😍\nSem recheio: ${qSem} × R$2\nCom recheio: ${qCom} × R$3\nRecheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\nCor chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\nTotal: ${totalEl.textContent}\nAguardo! ✨🍩`;
-    window.open(`https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`, '_blank');
+    let msg = `Oi! Pedido Deliciosa Fábrica 😍🍩\n\n`;
+
+    // Caixinhas
+    caixinhas.forEach(c => {
+      const qtd = parseInt(document.getElementById(c.id).value) || 0;
+      if (qtd > 0) msg += `${document.getElementById(c.totalEl).previousElementSibling.textContent} x${qtd} = R$ ${ (qtd * c.preco).toFixed(2) }\n`;
+    });
+
+    // Personalizados
+    const qSem = parseInt(sem.value) || 0;
+    const qCom = parseInt(com.value) || 0;
+    if (qSem + qCom > 0) {
+      msg += `\nPersonalizados:\nSem recheio: ${qSem} × R$2\nCom recheio: ${qCom} × R$3\n`;
+      msg += `Recheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\n`;
+      msg += `Cor chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\n`;
+    }
+
+    msg += `\nTotal geral: ${totalGeralEl.textContent}\nAguardo confirmação! ✨`;
+
+    const url = `https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
   }
-  atualizar();
+
+  atualizarTotais(); // Inicial
 </script>
 </body>
 </html>
