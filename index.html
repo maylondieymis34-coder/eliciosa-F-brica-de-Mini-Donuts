@@ -10,7 +10,6 @@
     body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), #fff); margin: 0; padding: 20px; color: #222; }
     .container { max-width: 750px; margin: 0 auto; background: white; border-radius: 30px; padding: 40px; box-shadow: 0 20px 50px rgba(255,20,147,0.2); text-align: center; }
     h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 4.2rem; margin: 0 0 10px; text-shadow: 2px 2px 8px rgba(255,20,147,0.3); }
-    .hero-img { width: 100%; max-height: 480px; object-fit: contain; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); margin-bottom: 40px; }
     .subtitle { color: #444; font-size: 1.8rem; margin-bottom: 35px; font-weight: 600; }
     h2 { color: var(--rosa); font-size: 3rem; margin: 50px 0 25px; font-weight: 900; letter-spacing: 1px; text-shadow: 1px 1px 4px rgba(255,20,147,0.2); }
     .caixinha { background: var(--creme); border-radius: 20px; padding: 25px; margin: 25px auto; max-width: 550px; box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
@@ -36,8 +35,6 @@
 <div class="container">
   <h1>🍩 Deliciosa Fábrica de Mini Donuts</h1>
   <p class="subtitle">Fofinhos, irresistíveis e feitos com carinho! ✨</p>
-
-  <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1176930047804535" alt="Deliciosa Fábrica de Mini Donuts" class="hero-img">
 
   <h2>Caixinhas Prontas</h2>
 
@@ -130,7 +127,7 @@
 
   <div class="info">
     <strong>Regras:</strong><br>
-    • Pedidos com 3 dias de antecedência<br>
+    • Pedidos devem ser realizados com no mínimo 3 dias de antecedência para quantidades acima de 50 unidades.<br>
     • Sinal de 50% para confirmar<br>
     • Pagamento: Pix, cartão ou dinheiro<br><br>
     <strong>WhatsApp:</strong> (67) 99327-1681
@@ -138,6 +135,25 @@
 </div>
 
 <script>
+  // Som de clique
+  function tocarSom() {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioContext.createOscillator();
+    const gainNode = audioContext.createGain();
+    
+    oscillator.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+    
+    oscillator.frequency.value = 800;
+    oscillator.type = 'sine';
+    
+    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+    
+    oscillator.start(audioContext.currentTime);
+    oscillator.stop(audioContext.currentTime + 0.1);
+  }
+
   // Caixinhas
   const caixinhas = [
     { id: 'c4sem', preco: 10, totalEl: 'total-c4sem' },
@@ -147,6 +163,7 @@
   ];
 
   function changeQuant(id, delta) {
+    tocarSom();
     const input = document.getElementById(id);
     let val = parseInt(input.value) || 0;
     val = Math.max(0, val + delta);
@@ -163,6 +180,7 @@
 
   function limitar(grupo, max) {
     grupo.forEach(i => i.addEventListener('change', () => {
+      tocarSom();
       if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}! 🥰`); }
       atualizarTotais();
     }));
@@ -195,6 +213,7 @@
   }
 
   function enviarPedido() {
+    tocarSom();
     let msg = `Oi! Pedido Deliciosa Fábrica 😍🍩\n\n`;
     caixinhas.forEach(c => {
       const qtd = parseInt(document.getElementById(c.id).value) || 0;
