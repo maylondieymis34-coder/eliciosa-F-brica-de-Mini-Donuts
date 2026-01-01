@@ -1,69 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deliciosa Fábrica de Mini Donuts 🍩</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&family=Pacifico&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deliciosa Fábrica de Mini Donuts 🍩✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Outfit', sans-serif;
-    }
-    .font-brand {
-      font-family: 'Pacifico', cursive;
-    }
-    .grid-bg {
-      background-image: linear-gradient(#d1fae5 1px, transparent 1px), linear-gradient(90deg, #d1fae5 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #f9a8d4;
-      border-radius: 10px;
-    }
-    .ribbon {
-      background: #ff2e9b;
-      position: relative;
-      padding: 20px 40px;
-      color: white;
-      font-weight: 900;
-      text-transform: uppercase;
-      font-style: italic;
-      display: inline-block;
-    }
-    .ribbon:before, .ribbon:after {
-      content: '';
-      position: absolute;
-      top: 10px;
-      border: 30px solid #d81b60;
-      z-index: -1;
-    }
-    .ribbon:before {
-      left: -40px;
-      border-left-color: transparent;
-    }
-    .ribbon:after {
-      right: -40px;
-      border-right-color: transparent;
-    }
+    :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --verde-menta: #98ff98; --creme: #fffaf0; }
+    body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), var(--verde-menta)); margin: 0; padding: 20px; color: #333; }
+    .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
+    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); text-align: center; font-size: 3.2rem; margin: 0 0 10px; }
+    .subtitle { text-align: center; color: #666; font-size: 1.3rem; margin-bottom: 30px; }
+    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin-top: 35px; }
+    .gallery { display: flex; overflow-x: auto; gap: 16px; padding: 20px 0; }
+    .gallery img { width: 260px; height: 260px; object-fit: cover; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); flex-shrink: 0; }
+    label { display: block; margin: 12px 0 6px; font-weight: 600; font-size: 1.1rem; }
+    input[type="number"] { width: 120px; padding: 10px; font-size: 1.2rem; border: 2px solid var(--rosa-claro); border-radius: 10px; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; }
+    .checkbox-group label { background: var(--creme); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); transition: all 0.25s; font-size: 0.95rem; }
+    .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
+    .total { font-size: 2.2rem; font-weight: 700; text-align: center; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 20px; border-radius: 16px; }
+    button { width: 100%; padding: 18px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.4rem; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 25px rgba(255,105,180,0.3); }
+    button:hover { background: #e0459a; transform: translateY(-3px); }
+    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; font-size: 0.95rem; line-height: 1.6; }
   </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
-  }
-}
-</script>
 </head>
-<body class="bg-[#B2F2E8] grid-bg min-h-screen text-slate-800">
-  <div id="root"></div>
+<body>
+<div class="container">
+  <h1>🍩 Deliciosa Fábrica</h1>
+  <p class="subtitle">Mini Donuts fofinhos e irresistíveis feitos com carinho! ✨</p>
+  <div class="gallery">
+    <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3692120361761538833" alt="Mini donuts coloridos">
+    <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3363456834525103458" alt="Assortimento de mini donuts">
+    <img src="https://thumbs.dreamstime.com/b/assorted-box-colorful-donuts-frosted-icing-sprinkles-chocolate-glaze-beautifully-arranged-bakery-takeaway-box-420485921.jpg" alt="Caixa cheia">
+    <img src="https://cms-bomgourmet.s3.amazonaws.com/bomgourmet/2018/10/201810/donuts-sonhos-e-sabores2-ec69e510.jpg" alt="Mini donuts variados">
+    <img src="https://thumbs.dreamstime.com/z/colorful-dessert-arrangement-stacked-donuts-macarons-pink-background-image-generated-using-ai-418194741.jpg" alt="Donuts rosa">
+  </div>
+  <h2>Quantos você quer? 💕</h2>
+  <label>Sem recheio (R$ 2,00 cada)</label><input type="number" id="sem" min="0" value="0">
+  <label>Com recheio (R$ 3,00 cada)</label><input type="number" id="com" min="0" value="0">
+  <h2>Recheios (até 2)</h2>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="recheio"><span>Doce de leite</span></label>
+    <label><input type="checkbox" name="recheio"><span>Leite Ninho</span></label>
+    <label><input type="checkbox" name="recheio"><span>Brigadeiro</span></label>
+    <label><input type="checkbox" name="recheio"><span>Churros</span></label>
+    <label><input type="checkbox" name="recheio"><span>Oreo</span></label>
+    <label><input type="checkbox" name="recheio"><span>Leite Ninho c/ morango</span></label>
+    <label><input type="checkbox" name="recheio"><span>Paçoca</span></label>
+    <label><input type="checkbox" name="recheio"><span>Pistache</span></label>
+    <label><input type="checkbox" name="recheio"><span>Nutella</span></label>
+  </div>
+  <h2>Coberturas (até 3)</h2>
+  <div class="checkbox-group">
+    <label><input type="checkbox" name="cobertura"><span>Granulado chocolate</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Granulado colorido</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Chocobool</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Amendoim</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Paçoca</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Granulado coração</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Confetes</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Morango</span></label>
+    <label><input type="checkbox" name="cobertura"><span>Leite Ninho</span></label>
+  </div>
+  <h2>Personalize!</h2>
+  <label>Cor do chocolate desejada:</label>
+  <input type="text" id="cor" placeholder="Ex: rosa bebê" style="width:100%; padding:12px; border:2px solid var(--rosa-claro); border-radius:12px;">
+  <div class="total" id="total">Total: R$ 0,00</div>
+  <button onclick="enviarPedido()">📲 Mandar pedido pelo WhatsApp</button>
+  <div class="info">
+    <strong>Regras:</strong><br>• Mínimo sugerido: 30 unidades<br>• 3 dias de antecedência<br>• Sinal 50%<br>• Pagamento: Pix, cartão, dinheiro<br><br>
+    <strong>Zap:</strong> (67) 99327-1681
+  </div>
+</div>
+<script>
+  const sem = document.getElementById('sem'), com = document.getElementById('com'), totalEl = document.getElementById('total');
+  const recheios = document.querySelectorAll('input[name="recheio"]'), coberturas = document.querySelectorAll('input[name="cobertura"]');
+  function limitar(grupo, max) { grupo.forEach(i => i.addEventListener('change', () => { if([...grupo].filter(c=>c.checked).length > max) {i.checked=false; alert(`Máx ${max}!`);} atualizar(); })); }
+  limitar(recheios, 2); limitar(coberturas, 3);
+  function atualizar() { const v = (parseInt(sem.value)||0)*2 + (parseInt(com.value)||0)*3; totalEl.textContent = `Total: R$ ${v.toFixed(2).replace('.', ',')}`; }
+  sem.addEventListener('input', atualizar); com.addEventListener('input', atualizar);
+  function getSel(grupo) { return [...grupo].filter(i=>i.checked).map(i=>i.nextElementSibling.textContent).join(', ') || 'Nenhum'; }
+  function enviarPedido() {
+    const qSem = parseInt(sem.value)||0, qCom = parseInt(com.value)||0;
+    if (qSem + qCom === 0) return alert('Escolha alguns donuts! 🍩');
+    const msg = `Oi! Pedido Mini Donuts 😍\nSem: ${qSem}×R$2\nCom: ${qCom}×R$3\nRecheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\nCor: ${document.getElementById('cor').value.trim()||'Padrão'}\nTotal: ${totalEl.textContent}\nAguardo! ✨`;
+    window.open(`https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+  atualizar();
+</script>
 </body>
 </html>
