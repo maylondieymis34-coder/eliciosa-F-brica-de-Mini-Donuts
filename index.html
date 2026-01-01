@@ -8,37 +8,37 @@
   <style>
     :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --verde-menta: #98ff98; --creme: #fffaf0; }
     body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), var(--verde-menta)); margin: 0; padding: 20px; color: #333; }
-    .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); }
-    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); text-align: center; font-size: 3.2rem; margin: 0 0 10px; }
-    .subtitle { text-align: center; color: #666; font-size: 1.3rem; margin-bottom: 30px; }
-    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin-top: 35px; }
-    .gallery { display: flex; overflow-x: auto; gap: 16px; padding: 20px 0; }
-    .gallery img { width: 260px; height: 260px; object-fit: cover; border-radius: 16px; box-shadow: 0 6px 20px rgba(0,0,0,0.15); flex-shrink: 0; }
-    label { display: block; margin: 12px 0 6px; font-weight: 600; font-size: 1.1rem; }
-    input[type="number"] { width: 120px; padding: 10px; font-size: 1.2rem; border: 2px solid var(--rosa-claro); border-radius: 10px; }
-    .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; }
-    .checkbox-group label { background: var(--creme); padding: 10px 16px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); transition: all 0.25s; font-size: 0.95rem; }
+    .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); text-align: center; }
+    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.5rem; margin: 10px 0 5px; }
+    .subtitle { color: #666; font-size: 1.4rem; margin-bottom: 20px; }
+    .hero-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 30px; }
+    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin: 35px 0 20px; font-size: 1.8rem; }
+    label { display: block; margin: 12px 0 6px; font-weight: 600; font-size: 1.2rem; }
+    input[type="number"] { width: 120px; padding: 10px; font-size: 1.3rem; border: 2px solid var(--rosa-claro); border-radius: 10px; text-align: center; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .checkbox-group label { background: var(--creme); padding: 12px 18px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); transition: all 0.25s; font-size: 1rem; }
     .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
-    .total { font-size: 2.2rem; font-weight: 700; text-align: center; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 20px; border-radius: 16px; }
-    button { width: 100%; padding: 18px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.4rem; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 25px rgba(255,105,180,0.3); }
-    button:hover { background: #e0459a; transform: translateY(-3px); }
-    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; font-size: 0.95rem; line-height: 1.6; }
+    .total { font-size: 2.4rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
+    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.5rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,105,180,0.3); }
+    button:hover { background: #e0459a; transform: translateY(-4px); }
+    .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; font-size: 1rem; line-height: 1.6; }
   </style>
 </head>
 <body>
 <div class="container">
-  <h1>🍩 Deliciosa Fábrica</h1>
+  <h1>🍩 Deliciosa Fábrica de Mini Donuts</h1>
   <p class="subtitle">Mini Donuts fofinhos e irresistíveis feitos com carinho! ✨</p>
-  <div class="gallery">
-    <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3692120361761538833" alt="Mini donuts coloridos">
-    <img src="https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3363456834525103458" alt="Assortimento de mini donuts">
-    <img src="https://thumbs.dreamstime.com/b/assorted-box-colorful-donuts-frosted-icing-sprinkles-chocolate-glaze-beautifully-arranged-bakery-takeaway-box-420485921.jpg" alt="Caixa cheia">
-    <img src="https://cms-bomgourmet.s3.amazonaws.com/bomgourmet/2018/10/201810/donuts-sonhos-e-sabores2-ec69e510.jpg" alt="Mini donuts variados">
-    <img src="https://thumbs.dreamstime.com/z/colorful-dessert-arrangement-stacked-donuts-macarons-pink-background-image-generated-using-ai-418194741.jpg" alt="Donuts rosa">
-  </div>
+
+  <!-- Sua imagem principal única no topo -->
+  <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1176930047804535" alt="Deliciosa Fábrica de Mini Donuts - Caixa cheia com Homer Simpson" class="hero-img">
+
   <h2>Quantos você quer? 💕</h2>
-  <label>Sem recheio (R$ 2,00 cada)</label><input type="number" id="sem" min="0" value="0">
-  <label>Com recheio (R$ 3,00 cada)</label><input type="number" id="com" min="0" value="0">
+  <label>Sem recheio (R$ 2,00 cada)</label>
+  <input type="number" id="sem" min="0" value="0">
+
+  <label>Com recheio (R$ 3,00 cada)</label>
+  <input type="number" id="com" min="0" value="0">
+
   <h2>Recheios (até 2)</h2>
   <div class="checkbox-group">
     <label><input type="checkbox" name="recheio"><span>Doce de leite</span></label>
@@ -51,6 +51,7 @@
     <label><input type="checkbox" name="recheio"><span>Pistache</span></label>
     <label><input type="checkbox" name="recheio"><span>Nutella</span></label>
   </div>
+
   <h2>Coberturas (até 3)</h2>
   <div class="checkbox-group">
     <label><input type="checkbox" name="cobertura"><span>Granulado chocolate</span></label>
@@ -63,31 +64,87 @@
     <label><input type="checkbox" name="cobertura"><span>Morango</span></label>
     <label><input type="checkbox" name="cobertura"><span>Leite Ninho</span></label>
   </div>
+
   <h2>Personalize!</h2>
-  <label>Cor do chocolate desejada:</label>
+  <label>Cor do chocolate desejada (ex: rosa, azul, dourado):</label>
   <input type="text" id="cor" placeholder="Ex: rosa bebê" style="width:100%; padding:12px; border:2px solid var(--rosa-claro); border-radius:12px;">
+
   <div class="total" id="total">Total: R$ 0,00</div>
+
   <button onclick="enviarPedido()">📲 Mandar pedido pelo WhatsApp</button>
+
   <div class="info">
-    <strong>Regras:</strong><br>• Mínimo sugerido: 30 unidades<br>• 3 dias de antecedência<br>• Sinal 50%<br>• Pagamento: Pix, cartão, dinheiro<br><br>
-    <strong>Zap:</strong> (67) 99327-1681
+    <strong>Regras do pedido:</strong><br>
+    • Mínimo sugerido: 30 unidades<br>
+    • Pedidos com 3 dias de antecedência<br>
+    • Sinal de 50% para confirmar<br>
+    • Pagamento: Pix, cartão ou dinheiro<br><br>
+    <strong>WhatsApp:</strong> (67) 99327-1681
   </div>
 </div>
+
 <script>
-  const sem = document.getElementById('sem'), com = document.getElementById('com'), totalEl = document.getElementById('total');
-  const recheios = document.querySelectorAll('input[name="recheio"]'), coberturas = document.querySelectorAll('input[name="cobertura"]');
-  function limitar(grupo, max) { grupo.forEach(i => i.addEventListener('change', () => { if([...grupo].filter(c=>c.checked).length > max) {i.checked=false; alert(`Máx ${max}!`);} atualizar(); })); }
-  limitar(recheios, 2); limitar(coberturas, 3);
-  function atualizar() { const v = (parseInt(sem.value)||0)*2 + (parseInt(com.value)||0)*3; totalEl.textContent = `Total: R$ ${v.toFixed(2).replace('.', ',')}`; }
-  sem.addEventListener('input', atualizar); com.addEventListener('input', atualizar);
-  function getSel(grupo) { return [...grupo].filter(i=>i.checked).map(i=>i.nextElementSibling.textContent).join(', ') || 'Nenhum'; }
-  function enviarPedido() {
-    const qSem = parseInt(sem.value)||0, qCom = parseInt(com.value)||0;
-    if (qSem + qCom === 0) return alert('Escolha alguns donuts! 🍩');
-    const msg = `Oi! Pedido Mini Donuts 😍\nSem: ${qSem}×R$2\nCom: ${qCom}×R$3\nRecheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\nCor: ${document.getElementById('cor').value.trim()||'Padrão'}\nTotal: ${totalEl.textContent}\nAguardo! ✨`;
-    window.open(`https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`, '_blank');
+  const sem = document.getElementById('sem');
+  const com = document.getElementById('com');
+  const totalEl = document.getElementById('total');
+  const recheios = document.querySelectorAll('input[name="recheio"]');
+  const coberturas = document.querySelectorAll('input[name="cobertura"]');
+
+  function limitarSelecao(grupo, max) {
+    grupo.forEach(input => {
+      input.addEventListener('change', () => {
+        const selecionados = [...grupo].filter(i => i.checked);
+        if (selecionados.length > max) {
+          input.checked = false;
+          alert(`Você pode escolher no máximo ${max} opções! 🥰`);
+        }
+        atualizarTotal();
+      });
+    });
   }
-  atualizar();
+
+  limitarSelecao(recheios, 2);
+  limitarSelecao(coberturas, 3);
+
+  function atualizarTotal() {
+    const qtdSem = parseInt(sem.value) || 0;
+    const qtdCom = parseInt(com.value) || 0;
+    const valor = qtdSem * 2 + qtdCom * 3;
+    totalEl.textContent = `Total: R$ ${valor.toFixed(2).replace('.', ',')}`;
+  }
+
+  sem.addEventListener('input', atualizarTotal);
+  com.addEventListener('input', atualizarTotal);
+
+  function getSelecionados(grupo) {
+    return [...grupo]
+      .filter(i => i.checked)
+      .map(i => i.nextElementSibling.textContent)
+      .join(', ') || 'Nenhum';
+  }
+
+  function enviarPedido() {
+    const qtdSem = parseInt(sem.value) || 0;
+    const qtdCom = parseInt(com.value) || 0;
+    if (qtdSem + qtdCom === 0) {
+      alert('Escolha pelo menos alguns donuts fofinhos! 🍩💕');
+      return;
+    }
+
+    const mensagem = `Oi Deliciosa Fábrica! 😍 Quero encomendar:\n\n` +
+      `Sem recheio: ${qtdSem} × R$2,00\n` +
+      `Com recheio: ${qtdCom} × R$3,00\n\n` +
+      `Recheios: ${getSelecionados(recheios)}\n` +
+      `Coberturas: ${getSelecionados(coberturas)}\n` +
+      `Cor do chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\n\n` +
+      `Total aproximado: ${totalEl.textContent}\n` +
+      `Aguardo vocês! ✨🍩`;
+
+    const url = `https://wa.me/5567993271681?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  }
+
+  atualizarTotal();
 </script>
 </body>
 </html>
