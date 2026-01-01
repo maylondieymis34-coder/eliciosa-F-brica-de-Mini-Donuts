@@ -9,17 +9,21 @@
     :root { --rosa: #ff69b4; --rosa-claro: #ffe4e1; --verde-menta: #98ff98; --creme: #fffaf0; }
     body { font-family: 'Outfit', sans-serif; background: linear-gradient(135deg, var(--rosa-claro), var(--verde-menta)); margin: 0; padding: 20px; color: #333; }
     .container { max-width: 700px; margin: 0 auto; background: white; border-radius: 24px; padding: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.12); text-align: center; }
-    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.5rem; margin: 10px 0 5px; }
-    .subtitle { color: #666; font-size: 1.4rem; margin-bottom: 20px; }
-    .hero-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 30px; }
-    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin: 35px 0 20px; font-size: 1.8rem; }
+    h1 { font-family: 'Pacifico', cursive; color: var(--rosa); font-size: 3.8rem; margin: 10px 0 5px; line-height: 1; }
+    .hero-img { width: 100%; max-height: 450px; object-fit: contain; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); margin-bottom: 30px; }
+    .subtitle { color: #666; font-size: 1.4rem; margin-bottom: 30px; }
+    h2 { color: var(--rosa); border-bottom: 3px solid var(--rosa-claro); padding-bottom: 10px; margin: 40px 0 20px; font-size: 2rem; }
+    .prices { text-align: left; max-width: 500px; margin: 0 auto 30px; }
+    .prices ul { list-style: none; padding: 0; }
+    .prices li { margin: 15px 0; font-size: 1.3rem; }
+    .prices strong { color: var(--rosa); font-size: 1.5rem; }
     label { display: block; margin: 12px 0 6px; font-weight: 600; font-size: 1.2rem; }
-    input[type="number"] { width: 120px; padding: 10px; font-size: 1.3rem; border: 2px solid var(--rosa-claro); border-radius: 10px; text-align: center; }
-    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    input[type="number"], input[type="text"] { width: 140px; padding: 10px; font-size: 1.3rem; border: 2px solid var(--rosa-claro); border-radius: 10px; text-align: center; margin: 0 auto; display: block; }
+    .checkbox-group { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-bottom: 30px; }
     .checkbox-group label { background: var(--creme); padding: 12px 18px; border-radius: 30px; cursor: pointer; border: 2px solid var(--rosa-claro); transition: all 0.25s; font-size: 1rem; }
     .checkbox-group input:checked + span { background: var(--rosa); color: white; border-color: var(--rosa); }
-    .total { font-size: 2.4rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
-    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.5rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,105,180,0.3); }
+    .total { font-size: 2.6rem; font-weight: 700; margin: 40px 0; color: var(--rosa); background: var(--creme); padding: 25px; border-radius: 16px; }
+    button { width: 100%; padding: 20px; background: var(--rosa); color: white; border: none; border-radius: 50px; font-size: 1.6rem; font-weight: 700; cursor: pointer; transition: all 0.3s; box-shadow: 0 10px 30px rgba(255,105,180,0.3); }
     button:hover { background: #e0459a; transform: translateY(-4px); }
     .info { background: var(--creme); padding: 20px; border-radius: 16px; margin-top: 30px; font-size: 1rem; line-height: 1.6; }
   </style>
@@ -27,12 +31,23 @@
 <body>
 <div class="container">
   <h1>🍩 Deliciosa Fábrica de Mini Donuts</h1>
-  <p class="subtitle">Mini Donuts fofinhos e irresistíveis feitos com carinho! ✨</p>
+  <p class="subtitle">Fofinhos, irresistíveis e feitos com muito carinho! ✨</p>
 
-  <!-- Sua imagem principal única no topo -->
-  <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1176930047804535" alt="Deliciosa Fábrica de Mini Donuts - Caixa cheia com Homer Simpson" class="hero-img">
+  <!-- Imagem principal única (sua foto com Homer e donuts) -->
+  <img src="https://lookaside.fbsbx.com/lookaside/crawler/media/?media_id=1176930047804535" alt="Deliciosa Fábrica de Mini Donuts" class="hero-img">
 
-  <h2>Quantos você quer? 💕</h2>
+  <!-- Novo cardápio de caixinhas -->
+  <h2>Caixinhas Prontas</h2>
+  <div class="prices">
+    <ul>
+      <li><strong>Caiixinha com 4 unidades (sem recheio)</strong> — R$ 10,00</li>
+      <li><strong>Caiixinha com 4 unidades (recheado)</strong> — R$ 12,00</li>
+      <li><strong>Caiixinha com 6 unidades (sem recheio)</strong> — R$ 13,00</li>
+      <li><strong>Caiixinha com 6 unidades (recheado)</strong> — R$ 16,00</li>
+    </ul>
+  </div>
+
+  <h2>Personalize seu pedido!</h2>
   <label>Sem recheio (R$ 2,00 cada)</label>
   <input type="number" id="sem" min="0" value="0">
 
@@ -65,17 +80,15 @@
     <label><input type="checkbox" name="cobertura"><span>Leite Ninho</span></label>
   </div>
 
-  <h2>Personalize!</h2>
-  <label>Cor do chocolate desejada (ex: rosa, azul, dourado):</label>
-  <input type="text" id="cor" placeholder="Ex: rosa bebê" style="width:100%; padding:12px; border:2px solid var(--rosa-claro); border-radius:12px;">
+  <h2>Cor do chocolate</h2>
+  <input type="text" id="cor" placeholder="Ex: rosa, azul, dourado">
 
-  <div class="total" id="total">Total: R$ 0,00</div>
+  <div class="total" id="total">Total aproximado: R$ 0,00</div>
 
-  <button onclick="enviarPedido()">📲 Mandar pedido pelo WhatsApp</button>
+  <button onclick="enviarPedido()">📲 Enviar Pedido pelo WhatsApp</button>
 
   <div class="info">
-    <strong>Regras do pedido:</strong><br>
-    • Mínimo sugerido: 30 unidades<br>
+    <strong>Regras:</strong><br>
     • Pedidos com 3 dias de antecedência<br>
     • Sinal de 50% para confirmar<br>
     • Pagamento: Pix, cartão ou dinheiro<br><br>
@@ -90,61 +103,31 @@
   const recheios = document.querySelectorAll('input[name="recheio"]');
   const coberturas = document.querySelectorAll('input[name="cobertura"]');
 
-  function limitarSelecao(grupo, max) {
-    grupo.forEach(input => {
-      input.addEventListener('change', () => {
-        const selecionados = [...grupo].filter(i => i.checked);
-        if (selecionados.length > max) {
-          input.checked = false;
-          alert(`Você pode escolher no máximo ${max} opções! 🥰`);
-        }
-        atualizarTotal();
-      });
-    });
+  function limitar(grupo, max) {
+    grupo.forEach(i => i.addEventListener('change', () => {
+      if ([...grupo].filter(c => c.checked).length > max) { i.checked = false; alert(`Máximo ${max}! 🥰`); }
+      atualizar();
+    }));
   }
+  limitar(recheios, 2);
+  limitar(coberturas, 3);
 
-  limitarSelecao(recheios, 2);
-  limitarSelecao(coberturas, 3);
-
-  function atualizarTotal() {
-    const qtdSem = parseInt(sem.value) || 0;
-    const qtdCom = parseInt(com.value) || 0;
-    const valor = qtdSem * 2 + qtdCom * 3;
-    totalEl.textContent = `Total: R$ ${valor.toFixed(2).replace('.', ',')}`;
+  function atualizar() {
+    const v = (parseInt(sem.value) || 0) * 2 + (parseInt(com.value) || 0) * 3;
+    totalEl.textContent = `Total aproximado: R$ ${v.toFixed(2).replace('.', ',')}`;
   }
+  sem.addEventListener('input', atualizar);
+  com.addEventListener('input', atualizar);
 
-  sem.addEventListener('input', atualizarTotal);
-  com.addEventListener('input', atualizarTotal);
-
-  function getSelecionados(grupo) {
-    return [...grupo]
-      .filter(i => i.checked)
-      .map(i => i.nextElementSibling.textContent)
-      .join(', ') || 'Nenhum';
-  }
+  function getSel(grupo) { return [...grupo].filter(i => i.checked).map(i => i.nextElementSibling.textContent).join(', ') || 'Nenhum'; }
 
   function enviarPedido() {
-    const qtdSem = parseInt(sem.value) || 0;
-    const qtdCom = parseInt(com.value) || 0;
-    if (qtdSem + qtdCom === 0) {
-      alert('Escolha pelo menos alguns donuts fofinhos! 🍩💕');
-      return;
-    }
-
-    const mensagem = `Oi Deliciosa Fábrica! 😍 Quero encomendar:\n\n` +
-      `Sem recheio: ${qtdSem} × R$2,00\n` +
-      `Com recheio: ${qtdCom} × R$3,00\n\n` +
-      `Recheios: ${getSelecionados(recheios)}\n` +
-      `Coberturas: ${getSelecionados(coberturas)}\n` +
-      `Cor do chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\n\n` +
-      `Total aproximado: ${totalEl.textContent}\n` +
-      `Aguardo vocês! ✨🍩`;
-
-    const url = `https://wa.me/5567993271681?text=${encodeURIComponent(mensagem)}`;
-    window.open(url, '_blank');
+    const qSem = parseInt(sem.value) || 0, qCom = parseInt(com.value) || 0;
+    if (qSem + qCom === 0) return alert('Escolha alguns donuts fofinhos! 🍩');
+    const msg = `Oi! Pedido Deliciosa Fábrica 😍\nSem recheio: ${qSem} × R$2\nCom recheio: ${qCom} × R$3\nRecheios: ${getSel(recheios)}\nCoberturas: ${getSel(coberturas)}\nCor chocolate: ${document.getElementById('cor').value.trim() || 'Padrão'}\nTotal: ${totalEl.textContent}\nAguardo! ✨🍩`;
+    window.open(`https://wa.me/5567993271681?text=${encodeURIComponent(msg)}`, '_blank');
   }
-
-  atualizarTotal();
+  atualizar();
 </script>
 </body>
 </html>
